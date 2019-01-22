@@ -24,7 +24,8 @@
 				<div class="card debug">
 					<h1>Title</h1>
 					<img src="images/boxart/sonic_the_hedgehog.png" alt="Sonic_the_hedgehog"/>
-					
+					<div class='publisher'>publisher: Sega</div>
+					<div class='consoles'>Sega Mega Drive</div>
 
 				</div>
 			</div>

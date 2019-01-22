@@ -100,10 +100,15 @@ header .nav .nav_item a {
 }
 .card h1 {
   font-size: 1.5em;
+  text-align: center;
 }
-.card .img {
+.card img {
   width: 300px;
   height: auto;
+}
+.card .consoles,
+.card .publisher {
+  text-align: center;
 }
 
 /* Games */
