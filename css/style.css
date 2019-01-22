@@ -98,7 +98,20 @@ header .nav .nav_item a {
   width: 300px;
   margin: 10px;
 }
+.card h1 {
+  font-size: 1.5em;
+}
+.card .img {
+  width: 300px;
+  height: auto;
+}
 
 /* Games */
+#games {
+  margin-top: 16px;
+  margin-left: 32px;
+  min-width: 350px;
+  max-width: calc(100% - 320px);
+}
 
 /*# sourceMappingURL=style.css.map */
