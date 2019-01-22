@@ -18,6 +18,7 @@
 .card {
 	width: 300px;
 	margin: 10px;
+	border-radius: 10px;
 
 	h1 {
 		font-size: 1.5em;
@@ -29,9 +30,15 @@
 		height: auto;
 	}
 
+	.year,
 	.consoles,
 	.publisher {
 		text-align: center;
+		margin: 5px 0 10px 0;
+	}
+
+	&:hover {
+		background: $tertairy_text_color;
 	}
 
 }

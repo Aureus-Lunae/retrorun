@@ -95,6 +95,7 @@ header .nav .nav_item a {
 .card {
   width: 300px;
   margin: 10px;
+  border-radius: 10px;
 }
 .card h1 {
   font-size: 1.5em;
@@ -104,9 +105,14 @@ header .nav .nav_item a {
   width: 300px;
   height: auto;
 }
+.card .year,
 .card .consoles,
 .card .publisher {
   text-align: center;
+  margin: 5px 0 10px 0;
+}
+.card:hover {
+  background: #1b998b;
 }
 
 /* Games */
