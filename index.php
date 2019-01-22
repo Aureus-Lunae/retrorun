@@ -17,24 +17,27 @@
 	<?php require_once "php/navbar.php" ?>
 
 	<section id="games">
+		<div class="game_wrapper">
+			<h1>Games</h1>
+		</div>
 		<div class="grid_layout">
-
 
 			<?php require_once 'php/gamecards.php'; ?>
 
-			<div class="grid_item">
+		</div>
+	</section>
 
-			</div>
-			<div class="grid_item">
 
-			</div>
-			<div class="grid_item">
-
-			</div>
+	<section id="consoles">
+		<div class="console_wrapper">
+			<h1>Consoles</h1>
+		</div>
+		<div class="grid_layout">
 
 		</div>
 
 	</section>
+
 
 
 

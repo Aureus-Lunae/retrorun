@@ -112,11 +112,23 @@ header .nav .nav_item a {
 }
 
 /* Games */
-#games {
+#games,
+#consoles {
   margin-top: 16px;
-  margin-left: 32px;
+  margin-left: 64px;
   min-width: 350px;
-  max-width: calc(100% - 320px);
+  max-width: calc(100% - 448px);
+}
+
+.game_wrapper,
+.console_wrapper {
+  background: #e84855;
+  font-size: 24px;
+  width: 100%;
+}
+.game_wrapper h1,
+.console_wrapper h1 {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
