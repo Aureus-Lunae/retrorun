@@ -1,0 +1,36 @@
+header {
+	height: $header_height;
+	background: $header_background;
+	width: 100%;
+	display: flex;
+	z-index: 3;
+	position: fixed;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.item {
+		width: $header_item;
+		text-align: center;
+		display: inline-block;
+		margin: 0;
+
+		h1 {
+			font-family: 'Oswald', sans-serif;
+			font-size: 3em;
+			color: $secondary_text_color;
+			line-height: 1em;
+			margin: 0;
+
+			span {
+				color: $tertairy_text_color;
+			}
+		}
+
+		a {
+			display: inline-block;
+			padding: auto 2em;
+			margin: 0.5em;
+		}
+
+	}
+}

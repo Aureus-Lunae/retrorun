@@ -1,0 +1,35 @@
+@import 'variables';
+
+* {
+	box-sizing: border-box;
+
+	&:before {
+		box-sizing: border-box;
+	}
+
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+html {
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	color: $primary_text_color;
+}
+
+body {
+	background: $primary_color;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.debug {
+	border: 1px solid red;
+}
+
+/*Header*/
+@import 'header';
