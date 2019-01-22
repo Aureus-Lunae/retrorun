@@ -33,6 +33,7 @@
 			<h1>Consoles</h1>
 		</div>
 		<div class="grid_layout">
+			<?php require_once 'php/consolecards.php'; ?>
 
 		</div>
 

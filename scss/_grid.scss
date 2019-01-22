@@ -19,6 +19,7 @@
 	width: 300px;
 	margin: 10px;
 	border-radius: 10px;
+	cursor: pointer;
 
 	h1 {
 		font-size: 1.5em;
@@ -28,6 +29,9 @@
 	img {
 		width: 300px;
 		height: auto;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+
 	}
 
 	.year,
@@ -38,7 +42,10 @@
 	}
 
 	&:hover {
-		background: $tertairy_text_color;
+		img {
+			filter: sepia(100%);
+		}
+
 	}
 
 }
