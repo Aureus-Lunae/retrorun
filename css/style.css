@@ -29,35 +29,50 @@ a {
 
 /*Header*/
 header {
-  height: 64px;
+  min-height: 64px;
   background: #151621;
   width: 100%;
   display: flex;
   z-index: 3;
-  position: fixed;
+  position: sticky;
   flex-wrap: wrap;
   justify-content: space-between;
+  top: 0;
 }
 header .item {
   width: 320px;
-  text-align: center;
   display: inline-block;
   margin: 0;
+  display: flex;
 }
 header .item h1 {
   font-family: "Oswald", sans-serif;
-  font-size: 3em;
+  font-size: 48px;
   color: #fffd82;
-  line-height: 1em;
-  margin: 0;
+  margin: 0 30px;
+  line-height: 48px;
 }
 header .item h1 span {
   color: #1b998b;
 }
-header .item a {
+header .nav {
+  min-width: 320px;
+  max-width: calc($header_item*2);
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+header .nav .nav_item {
+  width: 320px;
+  display: flex;
+  justify-content: flex-end;
+}
+header .nav .nav_item a {
   display: inline-block;
-  padding: auto 2em;
+  padding: 32px 16px 0 16px;
+  font-size: 1rem;
   margin: 0.5em;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

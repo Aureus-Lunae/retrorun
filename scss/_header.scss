@@ -1,36 +1,55 @@
 header {
-	height: $header_height;
+	min-height: 64px;
 	background: $header_background;
 	width: 100%;
 	display: flex;
 	z-index: 3;
-	position: fixed;
+	position: sticky;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	top: 0;
 
 	.item {
 		width: $header_item;
-		text-align: center;
 		display: inline-block;
 		margin: 0;
+		display: flex;
 
 		h1 {
 			font-family: 'Oswald', sans-serif;
-			font-size: 3em;
+			font-size: 48px;
 			color: $secondary_text_color;
-			line-height: 1em;
-			margin: 0;
+			margin: 0 30px;
+			line-height: 48px;
 
 			span {
 				color: $tertairy_text_color;
 			}
 		}
 
-		a {
-			display: inline-block;
-			padding: auto 2em;
-			margin: 0.5em;
+	}
+
+	.nav {
+		min-width: $header_item;
+		max-width: calc($header_item*2);
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+
+		.nav_item {
+			width: $header_item;
+			display: flex;
+			justify-content: flex-end;
+
+			a {
+				display: inline-block;
+				padding: 32px 16px 0 16px;
+				font-size: 1rem;
+				margin: 0.5em;
+				color: $primary_text_color;
+			}
 		}
 
 	}
+
 }
