@@ -17,7 +17,7 @@ require 'php/db_connect.php';
 		$consolecard .= '<div class="card">';
 		$consolecard .= '<h1>' . $consoles . '</h1>';
 		//$consolecard .= '<img src="images/console/' . $picture . '" alt="'. $consoles .' Picture"/>';
-		//$consolecard .= '<div class="year">' . $year . '</div>';
+		$consolecard .= '<div class="year">' . $year . '</div>';
 		$consolecard .= '<div class="publisher">Publisher: ' . $publisher . '</div>';
 		$consolecard .= '</div></div>';
 
