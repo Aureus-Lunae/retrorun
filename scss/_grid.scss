@@ -6,11 +6,9 @@
 	grid-gap: 10px;
 	grid-auto-rows: minmax(160px, auto);
 	grid-auto-flow: dense;
-	padding: 10px;
 }
 
 .grid_item {
-	padding: 1rem;
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;

@@ -83,11 +83,9 @@ header .nav .nav_item a {
   grid-gap: 10px;
   grid-auto-rows: minmax(160px, auto);
   grid-auto-flow: dense;
-  padding: 10px;
 }
 
 .grid_item {
-  padding: 1rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -116,6 +114,7 @@ header .nav .nav_item a {
 #consoles {
   margin-top: 16px;
   margin-left: 64px;
+  margin-bottom: 0px;
   min-width: 350px;
   max-width: calc(100% - 448px);
 }
@@ -123,12 +122,13 @@ header .nav .nav_item a {
 .game_wrapper,
 .console_wrapper {
   background: #e84855;
-  font-size: 24px;
   width: 100%;
+  margin-bottom: 0;
 }
 .game_wrapper h1,
 .console_wrapper h1 {
   margin-left: 20px;
+  font-size: 28px;
 }
 
 /*# sourceMappingURL=style.css.map */
