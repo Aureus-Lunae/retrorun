@@ -4,7 +4,7 @@ $url='http://'.$url.'/week2/';
 ?>
 
 	<header>
-		<div class='item'> <h1>Retro <span>Run</span></h1>
+		<div class='item'> <a href='#'><h1>Retro <span>Run</span></h1></a>
 		</div>
 		<div class='nav'>
 			<div class='nav_item'>

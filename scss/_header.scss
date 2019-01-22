@@ -31,10 +31,11 @@ header {
 
 	.nav {
 		min-width: $header_item;
-		max-width: calc($header_item*2);
+		max-width: calc(#{$header_item}*2);
 		margin: 0;
 		display: flex;
 		justify-content: flex-end;
+		flex-wrap: wrap;
 
 		.nav_item {
 			width: $header_item;

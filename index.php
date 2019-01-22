@@ -16,6 +16,28 @@
 <body>
 	<?php require_once 'php/navbar.php' ?>
 
+		<div class='grid_layout debug'>
+
+
+			<div class='grid_item debug'>
+				<div class='card debug'>
+					1
+				</div>
+			</div>
+
+			<div class='grid_item debug'>
+
+			</div>
+			<div class='grid_item debug'>
+
+			</div>
+			<div class='grid_item debug'>
+
+			</div>
+
+		</div>
+
+
 
 
 </body>
