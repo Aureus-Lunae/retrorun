@@ -105,7 +105,7 @@ header .nav .nav_item a {
 .card img {
   width: 300px;
   height: auto;
-  border-top-right-radius: 5px;
+  border-top-right-radius: 8px;
   border-bottom-right-radius: 5px;
 }
 .card .year,
