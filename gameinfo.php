@@ -18,6 +18,7 @@
 		$box_art = $result['game_box_art'];
 		$name_jap = $result['game_name_jap'];
 		$name_us = $result['game_name_us'];
+		$release_year = $result['game_release_year'];
 ?>
 
 
@@ -47,8 +48,11 @@
 		$html_output .=	'<div class="game_box">';
 		$html_output .='<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/> </div></div>';
 		$html_output .= '<div class="item_box"><br />';
-			$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
-			$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
+		$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
+		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
+		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
+
+
 		$html_output .= '</div>';
 
 
