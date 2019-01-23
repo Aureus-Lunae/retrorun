@@ -2,7 +2,7 @@
 
 require_once 'php/db_connect.php';
 
-	$sql_query = 'SELECT DISTINCT game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games LEFT OUTER JOIN publisher ON games.publisher_id = publisher.publisher_id LEFT OUTER JOIN game_consoles ON games.game_id = game_consoles.game_id LEFT OUTER JOIN consoles ON game_consoles.console_id = consoles.console_id ORDER BY game_release_year DESC, game_name LIMIT 12';
+	$sql_query = 'SELECT DISTINCT games.game_id, game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games LEFT OUTER JOIN publisher ON games.publisher_id = publisher.publisher_id LEFT OUTER JOIN game_consoles ON games.game_id = game_consoles.game_id LEFT OUTER JOIN consoles ON game_consoles.console_id = consoles.console_id ORDER BY game_release_year DESC , game_name LIMIT 12';
 
 	$db_result = $conn->query($sql_query);
 
@@ -14,9 +14,10 @@ require_once 'php/db_connect.php';
 		$publisher = $row['publisher_name'];
 		$consoles = $row['short_name'];
 		$year = $row['game_release_year'];
+		$game_id = $row['game_id'];
 
 		$gamecard = '<div class="grid_item">';
-		$gamecard .= '<div class="card">';
+		$gamecard .= '<a href="gameinfo.php?game=' . $game_id . '" <div class="card">';
 		$gamecard .= '<h1>' . $title . '</h1>';
 		$gamecard .= '<div class="imgbox"> <img src="images/boxart/' . $boxart . '" alt="' . $title . '"/></div>';
 		$gamecard .= '<div class="year">' . $year . '</div>';

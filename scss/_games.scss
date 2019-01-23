@@ -41,7 +41,7 @@
 		color: $secondary_text_color;
 		padding: 3px;
 
-		&:first-child {
+		&:first-of-type {
 			margin-top: 16px;
 		}
 	}
@@ -59,7 +59,7 @@
 		width: 190px;
 		padding: 3px;
 
-		&:first-child {
+		&:first-of-type {
 			margin-top: 16px;
 		}
 	}

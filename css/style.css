@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 *:before {
   box-sizing: border-box;
 }
-
 *:after {
   box-sizing: border-box;
 }
@@ -41,14 +39,12 @@ header {
   justify-content: space-between;
   top: 0;
 }
-
 header .item {
   width: 320px;
   display: inline-block;
   margin: 0;
   display: flex;
 }
-
 header .item h1 {
   font-family: "Oswald", sans-serif;
   font-size: 48px;
@@ -56,11 +52,9 @@ header .item h1 {
   margin: 0 30px;
   line-height: 48px;
 }
-
 header .item h1 span {
   color: #1b998b;
 }
-
 header .nav {
   min-width: 320px;
   max-width: calc(320px*2);
@@ -69,13 +63,11 @@ header .nav {
   justify-content: flex-end;
   flex-wrap: wrap;
 }
-
 header .nav .nav_item {
   width: 320px;
   display: flex;
   justify-content: flex-end;
 }
-
 header .nav .nav_item a {
   display: inline-block;
   padding: 32px 16px 0 16px;
@@ -99,7 +91,10 @@ header .nav .nav_item a {
   align-items: flex-start;
   justify-content: center;
 }
-
+.grid_item a {
+  text-decoration: none;
+  color: #fff;
+}
 .grid_item h1 {
   font-size: 3em;
   font-weight: 700;
@@ -117,20 +112,16 @@ header .nav .nav_item a {
   border-radius: 10px;
   cursor: pointer;
 }
-
 .card h1 {
   font-size: 1.5em;
   text-align: center;
 }
-
 .card .imgbox {
   height: 400px;
 }
-
 .card .console_imgbox {
   height: 250px;
 }
-
 .card .console_imgbox,
 .card .imgbox {
   width: 300px;
@@ -141,7 +132,6 @@ header .nav .nav_item a {
   display: flex;
   align-items: center;
 }
-
 .card .console_imgbox img,
 .card .imgbox img {
   display: block;
@@ -149,14 +139,12 @@ header .nav .nav_item a {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .card .year,
 .card .consoles,
 .card .publisher {
   text-align: center;
   margin: 5px 0 10px 0;
 }
-
 .card:hover .console_imgbox,
 .card:hover .imgbox {
   filter: sepia(100%);
@@ -178,7 +166,6 @@ header .nav .nav_item a {
   width: 100%;
   margin-bottom: 0;
 }
-
 .game_wrapper h1,
 .console_wrapper h1 {
   margin-left: 20px;
@@ -198,18 +185,15 @@ header .nav .nav_item a {
   min-width: 320px;
   max-width: 660px;
 }
-
 #games_container label {
   display: inline-block;
   width: 130px;
   color: #fffd82;
   padding: 3px;
 }
-
 #games_container label:first-of-type {
   margin-top: 16px;
 }
-
 #games_container .item_box {
   display: flex;
   flex-wrap: wrap;
@@ -217,17 +201,14 @@ header .nav .nav_item a {
   width: 320px;
   align-content: flex-start;
 }
-
 #games_container span {
   display: inline-block;
   width: 190px;
   padding: 3px;
 }
-
 #games_container span:first-of-type {
   margin-top: 16px;
 }
-
 #games_container p {
   text-align: justify;
 }
@@ -242,7 +223,6 @@ header .nav .nav_item a {
   display: flex;
   align-items: center;
 }
-
 .game_box img {
   display: block;
   width: 100%;
