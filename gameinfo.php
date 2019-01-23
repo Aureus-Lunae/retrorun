@@ -19,6 +19,31 @@
 		$name_jap = $result['game_name_jap'];
 		$name_us = $result['game_name_us'];
 		$release_year = $result['game_release_year'];
+
+
+		// Region selector //
+		$region = '';
+		if ($result['game_PAL'] == 1) {
+			$region = 'PAL';
+		}
+
+		if ($result['game_NTSC_J'] == 1) {
+			if ($region != ''){
+				$region .= ', NTSC-J';
+			} else {
+				$region = 'NTSC-J';
+			}
+		}
+
+		if ($result['game_NTSC'] == 1) {
+			if ($region != ''){
+				$region .= ', NTSC';
+			} else {
+				$region = 'NTSC';
+			}
+		}
+
+
 ?>
 
 
@@ -51,7 +76,7 @@
 		$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
 		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
 		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
-
+		$html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
 
 		$html_output .= '</div>';
 
