@@ -51,7 +51,8 @@
 		$html_output .= '<label>Genre:</label> <span>' . $genre . '</span><br /><br />';
 
 		$html_output .= '<label>Developer:</label> <span>' . $developer . '</span>';
-		$html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span>';
+		$html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span><br /><br />';
+		$html_output .= '<label>Series:</label> <span>' . $series . '</span>';
 
 		$html_output .= '</div>';
 
