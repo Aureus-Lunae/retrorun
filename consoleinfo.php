@@ -39,10 +39,14 @@
 		$html_output .=	'<div class="console_box">';
 		$html_output .='<img src="images/console/' . $console_img . '" alt="' . $title . '"/> </div></div>';
 
-		// $html_output .= '<div class="item_box">';
+		$html_output .= '<div class="item_box">';
 
-		// $html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
-		// $html_output .= '<label>US name:</label> <span>' . $name_us . '</span><br /><br />';
+		if ($title != $full_name) {
+			$html_output .= '<label>Full name:</label> <span>' . $full_name . '</span>';
+		}
+
+		$html_output .= '<label>Japanese name:</label> <span>' . $jap_name . '</span>';
+		$html_output .= '<label>US name:</label> <span>' . $us_name . '</span><br /><br />';
 
 		// $html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
 		// $html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
@@ -58,7 +62,7 @@
 
 		// $html_output .= '</div><div class="grid_item colspan-2">';
 		// $html_output .= '<p>' . $plot . '</p>';
-		// $html_output .= '</div>';
+		$html_output .= '</div>';
 
 		echo $html_output;
 ?>

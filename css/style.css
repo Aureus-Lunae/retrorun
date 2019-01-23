@@ -214,7 +214,8 @@ header .nav .nav_item a {
 }
 
 .console_box {
-  height: 300px;
+  height: 250px;
+  background: #fff;
 }
 
 .game_box {

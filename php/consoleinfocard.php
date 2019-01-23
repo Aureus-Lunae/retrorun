@@ -10,4 +10,8 @@
 		$title = $result['con_short_name'];
 		$console_img = $result['con_picture'];
 
+		$full_name = $result['con_name'];
+		$jap_name = $result['con_name_jap'];
+		$us_name = $result['con_name_us'];
+
 ?>
