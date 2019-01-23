@@ -49,18 +49,11 @@
 		$html_output .= '<label>US name:</label> <span>' . $us_name . '</span><br /><br />';
 
 		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
-		$html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
-		// $html_output .= '<label>Rating:</label> <span>' . $rating . ' / 100</span><br /><br />';
+		$html_output .= '<label>Regions:</label> <span>' . $region . '</span><br /><br />';
 
-		// $html_output .= '<label>Consoles:</label> <span>' . $consoles . '</span>';
-		// $html_output .= '<label>Players:</label> <span>' . $players . '</span>';
-		// $html_output .= '<label>Genre:</label> <span>' . $genre . '</span><br /><br />';
+		$html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span>';
 
-		// $html_output .= '<label>Developer:</label> <span>' . $developer . '</span>';
-		// $html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span><br /><br />';
-		// $html_output .= '<label>Series:</label> <span>' . $series . '</span>';
-
-		// $html_output .= '</div><div class="grid_item colspan-2">';
+		$html_output .= '</div><div class="grid_item colspan-2">';
 		// $html_output .= '<p>' . $plot . '</p>';
 		$html_output .= '</div>';
 
