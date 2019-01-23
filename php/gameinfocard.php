@@ -17,6 +17,7 @@
 		$consoles = $result['short_name'];
 		$rating = $result['game_rating'];
 		$series = $result['series'];
+		$plot = $result['game_plot'];
 
 		if (!$series){
 			$series = 'None';

@@ -40,6 +40,10 @@
 		width: 130px;
 		color: $secondary_text_color;
 		padding: 3px;
+
+		&:first-child {
+			margin-top: 16px;
+		}
 	}
 
 	.item_box {
@@ -54,7 +58,16 @@
 		display: inline-block;
 		width: 190px;
 		padding: 3px;
+
+		&:first-child {
+			margin-top: 16px;
+		}
 	}
+
+	p {
+		text-align: justify;
+	}
+
 }
 
 

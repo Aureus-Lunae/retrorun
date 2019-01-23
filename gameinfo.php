@@ -37,7 +37,7 @@
 		$html_output .=	'<div class="game_box">';
 		$html_output .='<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/> </div></div>';
 
-		$html_output .= '<div><br />';
+		$html_output .= '<div class="item_box">';
 
 		$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
 		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span><br /><br />';
@@ -54,9 +54,9 @@
 		$html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span><br /><br />';
 		$html_output .= '<label>Series:</label> <span>' . $series . '</span>';
 
+		$html_output .= '</div><div class="grid_item colspan-2">';
+		$html_output .= '<p>' . $plot . '</p>';
 		$html_output .= '</div>';
-
-
 
 		echo $html_output;
 ?>
