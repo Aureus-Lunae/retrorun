@@ -48,7 +48,7 @@
 		$html_output .= '<label>Japanese name:</label> <span>' . $jap_name . '</span>';
 		$html_output .= '<label>US name:</label> <span>' . $us_name . '</span><br /><br />';
 
-		// $html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
+		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
 		// $html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
 		// $html_output .= '<label>Rating:</label> <span>' . $rating . ' / 100</span><br /><br />';
 

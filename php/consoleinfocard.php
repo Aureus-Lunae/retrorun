@@ -13,5 +13,5 @@
 		$full_name = $result['con_name'];
 		$jap_name = $result['con_name_jap'];
 		$us_name = $result['con_name_us'];
-
+		$release_year = $result['con_release_year'];
 ?>
