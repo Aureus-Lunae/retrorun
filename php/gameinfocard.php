@@ -11,7 +11,7 @@
 		$name_jap = $result['game_name_jap'];
 		$name_us = $result['game_name_us'];
 		$release_year = $result['game_release_year'];
-
+		$genre = $result['genre_name'];
 
 		// Region selector //
 		$region = '';

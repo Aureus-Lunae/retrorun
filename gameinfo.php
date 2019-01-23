@@ -38,11 +38,11 @@
 		$html_output .='<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/> </div></div>';
 		$html_output .= '<div class="item_box"><br />';
 		$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
-		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
+		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span><br /><br />';
 		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
-		$html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
+		$html_output .= '<label>Regions:</label> <span>' . $region . '</span><br /><br />';
 		$html_output .= '<label>Players:</label> <span>' . $players . '</span>';
-
+		$html_output .= '<label>Genre:</label> <span>' . $genre . '</span> <br /><br />';
 
 		$html_output .= '</div>';
 
