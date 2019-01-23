@@ -43,8 +43,11 @@
 	}
 
 	.item_box {
-		display: block;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
 		width: 320px;
+		align-content: flex-start;
 	}
 
 	span {

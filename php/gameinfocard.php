@@ -12,6 +12,9 @@
 		$name_us = $result['game_name_us'];
 		$release_year = $result['game_release_year'];
 		$genre = $result['genre_name'];
+		$developer = $result['dev_name'];
+		$publisher = $result['publisher_name'];
+		$consoles = $result['short_name'];
 
 		// Region selector //
 		$region = '';
