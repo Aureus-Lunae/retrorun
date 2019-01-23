@@ -8,5 +8,6 @@
 		$result = $db_result->fetch(PDO::FETCH_ASSOC);
 
 		$title = $result['con_short_name'];
+		$console_img = $result['con_picture'];
 
 ?>

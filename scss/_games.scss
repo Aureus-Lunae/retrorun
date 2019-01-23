@@ -70,10 +70,16 @@
 
 }
 
-
+.console_box {
+	height: 300px;
+}
 
 .game_box {
 	height: 450px;
+}
+
+.console_box,
+.game_box {
 	width: 300px;
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;

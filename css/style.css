@@ -213,8 +213,16 @@ header .nav .nav_item a {
   text-align: justify;
 }
 
+.console_box {
+  height: 300px;
+}
+
 .game_box {
   height: 450px;
+}
+
+.console_box,
+.game_box {
   width: 300px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -223,6 +231,7 @@ header .nav .nav_item a {
   display: flex;
   align-items: center;
 }
+.console_box img,
 .game_box img {
   display: block;
   width: 100%;

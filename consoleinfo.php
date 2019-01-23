@@ -35,9 +35,9 @@
 		$html_output .= '<h1>' . $title . '</h1>
 			</div>';
 
-		// $html_output .=	'<div class="grid_item">';
-		// $html_output .=	'<div class="game_box">';
-		// $html_output .='<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/> </div></div>';
+		$html_output .=	'<div class="grid_item">';
+		$html_output .=	'<div class="console_box">';
+		$html_output .='<img src="images/console/' . $console_img . '" alt="' . $title . '"/> </div></div>';
 
 		// $html_output .= '<div class="item_box">';
 
