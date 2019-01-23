@@ -15,6 +15,7 @@
 		$us_name = $result['con_name_us'];
 		$release_year = $result['con_release_year'];
 		$publisher = $result['publisher_name'];
+		$description = $result['con_description'];
 
 		//Regions
 		$region = '';

@@ -54,7 +54,7 @@
 		$html_output .= '<label>Publisher:</label> <span>' . $publisher . '</span>';
 
 		$html_output .= '</div><div class="grid_item colspan-2">';
-		// $html_output .= '<p>' . $plot . '</p>';
+		$html_output .= '<p>' . $description . '</p>';
 		$html_output .= '</div>';
 
 		echo $html_output;
