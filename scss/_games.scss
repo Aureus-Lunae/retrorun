@@ -34,7 +34,27 @@
 #games_container {
 	min-width: 320px;
 	max-width: 660px;
+
+	label {
+		display: inline-block;
+		width: 130px;
+		color: $secondary_text_color;
+		padding: 3px;
+	}
+
+	.item_box {
+		display: block;
+		width: 320px;
+	}
+
+	span {
+		display: inline-block;
+		width: 190px;
+		padding: 3px;
+	}
 }
+
+
 
 .game_box {
 	height: 450px;

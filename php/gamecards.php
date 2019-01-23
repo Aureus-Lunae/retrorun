@@ -18,7 +18,7 @@ require_once 'php/db_connect.php';
 		$gamecard = '<div class="grid_item">';
 		$gamecard .= '<div class="card">';
 		$gamecard .= '<h1>' . $title . '</h1>';
-		$gamecard .= '<div class="imgbox"> <img src="images/' . $boxart . '" alt="' . $title . '"/></div>';
+		$gamecard .= '<div class="imgbox"> <img src="images/boxart/' . $boxart . '" alt="' . $title . '"/></div>';
 		$gamecard .= '<div class="year">' . $year . '</div>';
 		$gamecard .= '<div class="publisher">Publisher: ' . $publisher . '</div>';
 		$gamecard .= '<div class="consoles">' . $consoles . '</div>';

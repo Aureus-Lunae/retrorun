@@ -16,15 +16,17 @@
 		$result = $db_result->fetch(PDO::FETCH_ASSOC);
 		$title = $result['game_name'];
 		$box_art = $result['game_box_art'];
+		$name_jap = $result['game_name_jap'];
+		$name_us = $result['game_name_us'];
 ?>
 
 
 <head>
-  <meta charset='UTF-8' />
-  <meta name='description' content=' ' />
-  <meta name='keywords' content=' ' />
-  <meta name='author' content='Erwin Korsten' />
-  <meta name='viewport content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Info about the game <?php echo $title; ?>" />
+  <meta name="keywords" content=" " />
+  <meta name="author" content="Erwin Korsten" />
+  <meta name="viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title><?php echo $title; ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -35,17 +37,27 @@
 
 <section id="page_container">
 	<div id="games_container">
-		<div class="grid_layout">
-			<div class='grid-item colspan-2'>
-				<h1><?php echo $title; ?></h1>
-			</div>
-			<div class="grid-item">
-				<div class="game_box">
-					<?php echo '<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/>'; ?>
-				</div>
+		<?php 
+		$html_output = '<div class="grid_layout">';
+		$html_output .= '<div class="grid_item colspan-2">'; 
+		$html_output .= '<h1>' . $title . '</h1>
+			</div>';
 
-			</div>
-		</div>
+		$html_output .=	'<div class="grid_item">';
+		$html_output .=	'<div class="game_box">';
+		$html_output .='<img src="images/boxart/' . $box_art . '" alt="' . $title . '"/> </div></div>';
+		$html_output .= '<div class="item_box"><br />';
+			$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
+			$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
+		$html_output .= '</div>';
+
+
+
+		echo $html_output;
+?>
+
+
+
 	</div>
 
 </section>
