@@ -4,11 +4,11 @@ $url='http://'.$url.'/week2/';
 ?>
 
 	<header>
-		<div class='item'> <a href='#'><h1>Retro <span>Run</span></h1></a>
+		<div class='item'> <a href='index.php'><h1>Retro <span>Run</span></h1></a>
 		</div>
 		<div class='nav'>
 			<div class='nav_item'>
-			<a href='#'>Home</a>
+			<a href='index.php'>Home</a>
 			<a href='#'>games</a>
 			<a href='#'>consoles</a>
 			</div>

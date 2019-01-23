@@ -17,13 +17,13 @@ require_once 'php/db_connect.php';
 		$game_id = $row['game_id'];
 
 		$gamecard = '<div class="grid_item">';
-		$gamecard .= '<a href="gameinfo.php?game=' . $game_id . '" <div class="card">';
+		$gamecard .= '<a href="gameinfo.php?game=' . $game_id . '"> <div class="card">';
 		$gamecard .= '<h1>' . $title . '</h1>';
 		$gamecard .= '<div class="imgbox"> <img src="images/boxart/' . $boxart . '" alt="' . $title . '"/></div>';
 		$gamecard .= '<div class="year">' . $year . '</div>';
 		$gamecard .= '<div class="publisher">Publisher: ' . $publisher . '</div>';
 		$gamecard .= '<div class="consoles">' . $consoles . '</div>';
-		$gamecard .= '</div></div>';
+		$gamecard .= '</div></a></div>';
 
 		echo $gamecard;
 	}
