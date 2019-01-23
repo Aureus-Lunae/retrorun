@@ -15,6 +15,7 @@
 		$developer = $result['dev_name'];
 		$publisher = $result['publisher_name'];
 		$consoles = $result['short_name'];
+		$rating = $result['game_rating'];
 
 		// Region selector //
 		$region = '';

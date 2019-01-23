@@ -40,10 +40,11 @@
 		$html_output .= '<div><br />';
 
 		$html_output .= '<label>Japanese name:</label> <span>' . $name_jap . '</span>';
-		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
+		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span><br /><br />';
 
 		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
-		$html_output .= '<label>Regions:</label> <span>' . $region . '</span><br /><br />';
+		$html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
+		$html_output .= '<label>Rating:</label> <span>' . $rating . ' / 100</span><br /><br />';
 
 		$html_output .= '<label>Consoles:</label> <span>' . $consoles . '</span>';
 		$html_output .= '<label>Players:</label> <span>' . $players . '</span>';
