@@ -10,7 +10,6 @@
 	require_once 'php/gameinfocard.php'
 ?>
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="description" content="Info about the game <?php echo $title; ?>" />
