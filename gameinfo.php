@@ -7,43 +7,7 @@
 		header('Location: index.php');
 	}
 	$game_id = $_GET["game"];
-	require 'php/db_connect.php';
-
-	$sql_query = 'SELECT DISTINCT game_name, game_name_jap, game_name_us, game_release_year, game_PAL, game_NTSC_J, game_NTSC, game_min_players, game_max_players, game_box_art, game_plot, game_rating, genre_name, dev_name, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games LEFT OUTER JOIN publisher ON games.publisher_id = publisher.publisher_id LEFT OUTER JOIN game_consoles ON games.game_id = game_consoles.game_id LEFT OUTER JOIN consoles ON game_consoles.console_id = consoles.console_id LEFT OUTER JOIN developer ON games.dev_id = developer.dev_id LEFT OUTER JOIN genre on games.genre_id = genre.genre_id WHERE games.game_id = ' . $game_id;
-
-		$db_result = $conn->query($sql_query);
-
-		$result = $db_result->fetch(PDO::FETCH_ASSOC);
-		$title = $result['game_name'];
-		$box_art = $result['game_box_art'];
-		$name_jap = $result['game_name_jap'];
-		$name_us = $result['game_name_us'];
-		$release_year = $result['game_release_year'];
-
-
-		// Region selector //
-		$region = '';
-		if ($result['game_PAL'] == 1) {
-			$region = 'PAL';
-		}
-
-		if ($result['game_NTSC_J'] == 1) {
-			if ($region != ''){
-				$region .= ', NTSC-J';
-			} else {
-				$region = 'NTSC-J';
-			}
-		}
-
-		if ($result['game_NTSC'] == 1) {
-			if ($region != ''){
-				$region .= ', NTSC';
-			} else {
-				$region = 'NTSC';
-			}
-		}
-
-
+	require_once 'php/gameinfocard.php'
 ?>
 
 
@@ -77,6 +41,8 @@
 		$html_output .= '<label>US name:</label> <span>' . $name_us . '</span>';
 		$html_output .= '<label>Release:</label> <span>' . $release_year . '</span>';
 		$html_output .= '<label>Regions:</label> <span>' . $region . '</span>';
+		$html_output .= '<label>Players:</label> <span>' . $players . '</span>';
+
 
 		$html_output .= '</div>';
 
