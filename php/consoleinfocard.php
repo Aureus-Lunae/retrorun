@@ -14,4 +14,25 @@
 		$jap_name = $result['con_name_jap'];
 		$us_name = $result['con_name_us'];
 		$release_year = $result['con_release_year'];
+
+		//Regions
+		$region = '';
+		if ($result['con_PAL'] == 1) {
+			$region = 'PAL';
+		}
+		if ($result['con_NTSC_J'] == 1) {
+			if ($region){
+				$region .= ', NTSC-J';
+			} else {
+				$region = 'NTSC-J';
+			}
+		}
+		if ($result['con_NTSC'] == 1) {
+			if ($region){
+				$region .= ', NTSC';
+			} else {
+				$region = 'NTSC';
+			}
+		}
+
 ?>
