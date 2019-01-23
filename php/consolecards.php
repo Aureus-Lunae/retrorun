@@ -7,19 +7,19 @@ require 'php/db_connect.php';
 
 	foreach ($db_result as $row)
     {          
-
+    $console_id = $row['console_id'];
 		$consoles = $row['con_short_name'];
 		$picture = $row['con_picture'];
 		$publisher = $row['publisher_name'];
 		$year = $row['con_release_year'];
 
 		$consolecard = '<div class="grid_item">';
-		$consolecard .= '<div class="card">';
+		$consolecard .= '<a href="consoleinfo.php?console=' . $console_id . '"><div class="card">';
 		$consolecard .= '<h1>' . $consoles . '</h1>';
 		$consolecard .= '<div class="console_imgbox"><img src="images/console/' . $picture . '" alt="'. $consoles .' Picture"/></div>';
 		$consolecard .= '<div class="year">' . $year . '</div>';
 		$consolecard .= '<div class="publisher">Publisher: ' . $publisher . '</div>';
-		$consolecard .= '</div></div>';
+		$consolecard .= '</div></a></div>';
 
 		echo $consolecard;
 	}
