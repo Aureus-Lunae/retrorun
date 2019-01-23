@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 	grid-gap: 10px;
-	grid-auto-rows: minmax(160px, auto);
+	grid-auto-rows: minmax(16px, auto);
 	grid-auto-flow: dense;
 }
 
@@ -13,6 +13,17 @@
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: center;
+
+	h1 {
+		font-size: 2em;
+		font-weight: 700;
+		text-align: center;
+	}
+
+}
+
+.colspan-2 {
+	grid-column-end: span 2;
 }
 
 .card {
@@ -26,12 +37,30 @@
 		text-align: center;
 	}
 
-	img {
-		width: 300px;
-		height: auto;
-		border-top-right-radius: 8px;
-		border-bottom-right-radius: 5px;
+	.imgbox {
+		height: 400px;
+	}
 
+	.console_imgbox {
+		height: 250px;
+	}
+
+	.console_imgbox,
+	.imgbox {
+		width: 300px;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		img {
+			display: block;
+			width: 100%;
+			border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
 	}
 
 	.year,
@@ -42,7 +71,9 @@
 	}
 
 	&:hover {
-		img {
+
+		.console_imgbox,
+		.imgbox {
 			filter: sepia(100%);
 		}
 

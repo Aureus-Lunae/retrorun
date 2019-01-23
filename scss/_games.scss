@@ -1,4 +1,4 @@
-/* Games */
+/* homepage */
 
 #games,
 #consoles {
@@ -18,5 +18,38 @@
 	h1 {
 		margin-left: 20px;
 		font-size: 28px;
+	}
+}
+
+/* Game Page */
+
+#page_container {
+	min-width: 350px;
+	max-width: calc(100% - 448px);
+	margin-left: 64px;
+	display: flex;
+	justify-content: center;
+}
+
+#games_container {
+	min-width: 320px;
+	max-width: 660px;
+}
+
+.game_box {
+	height: 450px;
+	width: 300px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	img {
+		display: block;
+		width: 100%;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
 	}
 }
