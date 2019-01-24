@@ -1,7 +1,7 @@
 <?php
 	require 'php/db_connect.php';
 
-	$search_query = 'SELECT games.game_id, genre_name, game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games INNER JOIN publisher ON games.publisher_id = publisher.publisher_id INNER JOIN developer ON games.dev_id = developer.dev_id INNER JOIN game_consoles ON games.game_id = game_consoles.game_id INNER JOIN consoles ON game_consoles.console_id = consoles.console_id INNER JOIN genre ON games.genre_id = genre.genre_id WHERE game_name LIKE :name OR publisher_name LIKE :name GROUP BY games.game_id ORDER BY game_release_year DESC, game_name LIMIT 24';
+	$search_query = 'SELECT games.game_id, genre_name, game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games INNER JOIN publisher ON games.publisher_id = publisher.publisher_id INNER JOIN developer ON games.dev_id = developer.dev_id INNER JOIN game_consoles ON games.game_id = game_consoles.game_id INNER JOIN consoles ON game_consoles.console_id = consoles.console_id INNER JOIN genre ON games.genre_id = genre.genre_id WHERE game_name LIKE :name OR publisher_name LIKE :name OR dev_name LIKE :name GROUP BY games.game_id ORDER BY game_release_year DESC, game_name LIMIT 24';
 
 	$game_search_result = $conn->prepare($search_query);
 
