@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
+<?php 
+
+	if ($_GET){
+		$genre_value = $_GET['genre'];
+		$console_value = $_GET['console'];
+		$publisher_value = $_GET['publisher'];
+		$min_players_value = $_GET['min_players'];
+		$max_players_value = $_GET['max_players'];
+	} else {
+		$max_players_value = $min_players_value = $publisher_value = $console_value = $genre_value = 0;
+	}
+
+?>
 
 <head>
   <meta charset="UTF-8" />
@@ -56,25 +69,10 @@
 		</div>
 		<div class="grid_layout">
 
-			<?php require_once 'php/gamecards.php'; ?>
+			<?php require_once 'php/gamecardsfilter.php'; ?>
 
 		</div>
 	</section>
-
-
-	<section id="consoles">
-		<div class="console_wrapper">
-			<h1>Consoles</h1>
-		</div>
-		<div class="grid_layout">
-			<?php require_once 'php/consolecards.php'; ?>
-
-		</div>
-
-	</section>
-
-
-
 
 </body>
 

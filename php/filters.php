@@ -11,6 +11,7 @@
 
   $genre = '<label>Genre:';
   $genre .= '<select name="genre" id="genre" size="1">';
+  $genre .= '<option value="0">None</option>';
 
 	foreach ($genre_db as $row) {          
 		$genre .= '<option value="' . $row['genre_id'] . '">' . $row['genre_name'] . '</option>';
