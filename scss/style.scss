@@ -25,6 +25,11 @@ body {
 
 a {
 	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+		color: $secondary_text_color;
+	}
 }
 
 .debug {

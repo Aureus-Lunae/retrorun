@@ -41,13 +41,35 @@ header {
 			width: $header_item;
 			display: flex;
 			justify-content: flex-end;
+			align-items: flex-end;
+
+			form {
+				width: 200px;
+			}
+
+			button,
+			input {
+				border: 1px solid $primary_color;
+				background: $tertiary_color;
+				padding: 1px;
+				width: 130px;
+				margin: 0.5em;
+			}
+
 
 			a {
 				display: inline-block;
-				padding: 32px 16px 0 16px;
+				padding: 0 16px;
 				font-size: 1rem;
 				margin: 0.5em;
 				color: $primary_text_color;
+
+				&:hover {
+					text-decoration: underline;
+					color: $secondary_text_color;
+				}
+
+
 			}
 		}
 

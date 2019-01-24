@@ -22,6 +22,10 @@ body {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+  color: #fffd82;
+}
 
 .debug {
   border: 1px solid red;
@@ -67,13 +71,29 @@ header .nav .nav_item {
   width: 320px;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
+}
+header .nav .nav_item form {
+  width: 200px;
+}
+header .nav .nav_item button,
+header .nav .nav_item input {
+  border: 1px solid #2d3047;
+  background: #70b5ff;
+  padding: 1px;
+  width: 130px;
+  margin: 0.5em;
 }
 header .nav .nav_item a {
   display: inline-block;
-  padding: 32px 16px 0 16px;
+  padding: 0 16px;
   font-size: 1rem;
   margin: 0.5em;
   color: #fff;
+}
+header .nav .nav_item a:hover {
+  text-decoration: underline;
+  color: #fffd82;
 }
 
 /* Grid related things */

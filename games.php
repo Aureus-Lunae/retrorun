@@ -16,9 +16,6 @@
 		$max_players_value = $min_players_value = $sort_value = $publisher_value = $console_value = $genre_value = 0;
 	}
 
-
-
-
 ?>
 
 <head>
