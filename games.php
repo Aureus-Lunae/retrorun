@@ -35,13 +35,6 @@
 				<span class="filters">Filters</span>
 					<?php include 'php/filters.php' ?>
 
-					<label>Console:
-					<select name="console" id="console" size="1">
-						<option value="1">Game</option>
-						<option value="2">Adventure</option>
-					</select>
-					</label>
-
 					<label>Publisher:
 					<select name="publisher" id="publisher" size="1">
 						<option value="1">Game</option>

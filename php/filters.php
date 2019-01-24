@@ -20,6 +20,24 @@
 	$genre .= '</select></label>';
 	echo $genre;
 
+	//Console Filter
+	$console_query = 'SELECT console_id, con_short_name FROM consoles';
+
+	$console_db = $conn->prepare($console_query);
+
+	$console_db->execute();
+
+	$console = '<label>Console:';
+  $console .= '<select name="console" id="genre" size="1">';
+  $console .= '<option value="0">None</option>';
+
+	foreach ($console_db as $row) {          
+		$console .= '<option value="' . $row['console_id'] . '">' . $row['con_short_name'] . '</option>';
+	}
+	$console .= '</select></label>';
+	echo $console;
+
+
 	$conn = null;
 ?>
 
