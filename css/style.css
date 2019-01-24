@@ -113,8 +113,9 @@ header .nav .nav_item a {
   cursor: pointer;
 }
 .card h1 {
-  font-size: 1.5em;
+  font-size: 24px;
   text-align: center;
+  height: 60px;
 }
 .card .imgbox {
   height: 400px;

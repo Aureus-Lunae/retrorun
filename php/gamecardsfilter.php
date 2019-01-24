@@ -23,6 +23,22 @@
 		}	
 	}
 
+	if ($min_players_value > 0){
+		if ($add_query){
+			$add_query .= 'AND game_min_players = ' . $min_players_value . ' ';
+		} else {
+			$add_query = 'WHERE game_min_players = ' . $min_players_value . ' ';
+		}	
+	}
+
+	if ($max_players_value > 0){
+		if ($add_query){
+			$add_query .= 'AND game_max_players <= ' . $max_players_value . ' ';
+		} else {
+			$add_query = 'WHERE game_max_players <= ' . $max_players_value . ' ';
+		}	
+	}
+
 	$sql_query = 'SELECT games.game_id, genre_name, game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games INNER JOIN publisher ON games.publisher_id = publisher.publisher_id INNER JOIN game_consoles ON games.game_id = game_consoles.game_id INNER JOIN consoles ON game_consoles.console_id = consoles.console_id INNER JOIN genre ON games.genre_id = genre.genre_id ';
 	
 	if ($add_query)
@@ -32,7 +48,7 @@
 
 	$sql_query .= 'GROUP BY games.game_id ORDER BY game_release_year DESC , game_name LIMIT 12';
 
-
+	//echo $sql_query;
 	$db_result = $conn->prepare($sql_query);
 
 	$db_result->execute();
