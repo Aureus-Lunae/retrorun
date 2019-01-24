@@ -32,49 +32,50 @@
 
 	<section id="games">
 		<div class="game_wrapper">
-	<form action="games.php" method="get">	
+			<form action="games.php" method="get">
 				<span class="filters">Filters</span>
-					<?php include 'php/filters.php' ?>
+				<br /><input type="submit" value="Submit"> 
+					<div class='filter_list'>
+						<?php include 'php/filters.php'; ?>
 
-					<label>Min Players
-						<select name="min_players" id="min_players" size="1">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-						</select>
-					</label>
+						<label>Max Players Low
+							<select name="min_players" id="min_players" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+							</select>
+						</label>
 
-					<label>Max Players
-						<select name="max_players" id="max_players" size="1">
-							<option value="0">No max</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-						</select>
-					</label>
-					<label>Sort by:
-						<select name="sort" id="sort" size="1">
-							<option value="0">&#9660 Release Year </option>
-							<option value="1">&#9650 Release Year </option>
-							<option value="2">&#9660 Name</option>
-							<option value="3">&#9650 Name</option>
-						</select>
-					</label>
-					<input type="submit" value="Submit">
-				</div>
-
+						<label>Max Players High
+							<select name="max_players" id="max_players" size="1">
+								<option value="0">No max</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+							</select>
+						</label>
+						<label>Sort by:
+							<select name="sort" id="sort" size="1">
+								<option value="0">&#9660 Release Year </option>
+								<option value="1">&#9650 Release Year </option>
+								<option value="2">&#9660 Name</option>
+								<option value="3">&#9650 Name</option>
+							</select>
+						</label>
+					</div>
 			</form>
 		</div>
+
 		<div class="grid_layout">
 
 			<?php require_once 'php/gamecardsfilter.php'; ?>

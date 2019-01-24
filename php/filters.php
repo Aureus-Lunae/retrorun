@@ -53,8 +53,6 @@
 	}
 	$publisher .= '</select></label>';
 	echo $publisher;
-
-
 	$conn = null;
 ?>
 

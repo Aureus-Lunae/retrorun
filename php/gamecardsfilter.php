@@ -23,23 +23,39 @@
 		}	
 	}
 
-	if ($min_players_value > 0){
-		if ($add_query){
-			$add_query .= 'AND game_min_players = ' . $min_players_value . ' ';
+	if ($min_players_value > 1){
+		if ($max_players_value >= $min_players_value){
+			if ($add_query){
+				$add_query .= 'AND game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
+			} else {
+				$add_query = 'WHERE game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
+			}	
 		} else {
-			$add_query = 'WHERE game_min_players = ' . $min_players_value . ' ';
-		}	
+			if ($add_query){
+				$add_query .= 'AND game_max_players BETWEEN ' . $min_players_value . ' AND 100 ';
+			} else {
+				$add_query = 'WHERE game_max_players BETWEEN ' . $min_players_value . ' AND 100 ';
+			}	
+		}
 	}
 
 	if ($max_players_value > 0){
-		if ($add_query){
-			$add_query .= 'AND game_max_players <= ' . $max_players_value . ' ';
+		if ($max_players_value >= $min_players_value){
+			if ($add_query){
+				$add_query .= 'AND game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
+			} else {
+				$add_query = 'WHERE game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
+			}	
 		} else {
-			$add_query = 'WHERE game_max_players <= ' . $max_players_value . ' ';
-		}	
+			if ($add_query){
+				$add_query .= 'AND game_max_players BETWEEN 1 AND ' . $max_players_value . ' ';
+			} else {
+				$add_query = 'WHERE game_max_players BETWEEN 1 AND ' . $max_players_value . ' ';
+			}	
+		}
 	}
 
-	//SORT OPTIONS: ORDER BY game_release_year DESC
+	SORT OPTIONS: ORDER BY game_release_year DESC
 	
 	switch ($sort_value) {
 		case 1:
@@ -67,7 +83,7 @@
 
 	$sql_query .= 'GROUP BY games.game_id ' . $query_order . ' LIMIT 25';
 
-	//echo $sql_query;
+	echo $sql_query;
 	$db_result = $conn->prepare($sql_query);
 
 	$db_result->execute();
