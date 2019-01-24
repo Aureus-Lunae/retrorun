@@ -3,7 +3,9 @@
 require 'php/db_connect.php';
 
 	$sql_query = 'SELECT DISTINCT console_id, con_short_name, con_release_year, con_picture, publisher_name FROM consoles LEFT OUTER JOIN publisher ON consoles.publisher_id = publisher.publisher_id ORDER BY con_release_year DESC, con_name LIMIT 12';
-	$db_result = $conn->query($sql_query);
+
+	$db_result = $conn->prepare($sql_query);
+	$db_result->execute();
 
 	foreach ($db_result as $row)
     {          
