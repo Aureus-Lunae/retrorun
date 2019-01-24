@@ -28,7 +28,7 @@
 	$console_db->execute();
 
 	$console = '<label>Console:';
-  $console .= '<select name="console" id="genre" size="1">';
+  $console .= '<select name="console" id="console" size="1">';
   $console .= '<option value="0">None</option>';
 
 	foreach ($console_db as $row) {          
@@ -36,6 +36,23 @@
 	}
 	$console .= '</select></label>';
 	echo $console;
+
+	//publisher Filter
+	$publisher_query = 'SELECT publisher_id, publisher_name FROM publisher';
+
+	$publisher_db = $conn->prepare($publisher_query);
+
+	$publisher_db->execute();
+
+	$publisher = '<label>publisher:';
+  $publisher .= '<select name="publisher" id="publisher" size="1">';
+  $publisher .= '<option value="0">None</option>';
+
+	foreach ($publisher_db as $row) {          
+		$publisher .= '<option value="' . $row['publisher_id'] . '">' . $row['publisher_name'] . '</option>';
+	}
+	$publisher .= '</select></label>';
+	echo $publisher;
 
 
 	$conn = null;

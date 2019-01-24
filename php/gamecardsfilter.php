@@ -5,14 +5,21 @@
 
 	//Genre Filter
 	if ($genre_value > 0){
-		$add_query = 'WHERE genre.genre_id = ' . $genre_value . ' ';
-		
+		$add_query = 'WHERE genre.genre_id = ' . $genre_value . ' ';		
 	}
 	if ($console_value > 0){
 		if ($add_query){
-			$add_query = 'AND consoles.console_id = ' . $console_value . ' ';
+			$add_query .= 'AND consoles.console_id = ' . $console_value . ' ';
 		} else {
 			$add_query = 'WHERE consoles.console_id = ' . $console_value . ' ';
+		}	
+	}
+
+	if ($publisher_value > 0){
+		if ($add_query){
+			$add_query .= 'AND publisher.publisher_id = ' . $publisher_value . ' ';
+		} else {
+			$add_query = 'WHERE publisher.publisher_id = ' . $publisher_value . ' ';
 		}	
 	}
 
