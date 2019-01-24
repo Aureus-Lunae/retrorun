@@ -2,7 +2,7 @@
 
 require 'php/db_connect.php';
 
-	$search_con_query = 'SELECT DISTINCT console_id, con_short_name, con_release_year, con_picture, publisher_name FROM consoles LEFT OUTER JOIN publisher ON consoles.publisher_id = publisher.publisher_id WHERE con_short_name LIKE :name OR con_name LIKE :name ORDER BY con_release_year DESC, con_name LIMIT 24';
+	$search_con_query = 'SELECT DISTINCT console_id, con_short_name, con_release_year, con_picture, publisher_name FROM consoles LEFT OUTER JOIN publisher ON consoles.publisher_id = publisher.publisher_id WHERE con_short_name LIKE :name OR con_name LIKE :name OR publisher_name LIKE :name ORDER BY con_release_year DESC, con_name LIMIT 24';
 
 	$search_con = $conn->prepare($search_con_query);
 	$search_con->execute(array(':name'=>"%{$search}%"));
