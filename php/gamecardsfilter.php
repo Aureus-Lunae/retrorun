@@ -39,6 +39,19 @@
 		}	
 	}
 
+	//SORT OPTIONS: ORDER BY game_release_year DESC
+	
+	switch ($sort_value) {
+		case 1:
+			$query_order = 'ORDER BY game_release_year ASC, game_name ASC';
+			break;
+		default:
+			$query_order = 'ORDER BY game_release_year DESC, game_name ASC';
+			break;
+	}
+
+
+
 	$sql_query = 'SELECT games.game_id, genre_name, game_name, game_box_art, game_release_year, publisher_name, GROUP_CONCAT(con_short_name SEPARATOR ", ") AS short_name FROM games INNER JOIN publisher ON games.publisher_id = publisher.publisher_id INNER JOIN game_consoles ON games.game_id = game_consoles.game_id INNER JOIN consoles ON game_consoles.console_id = consoles.console_id INNER JOIN genre ON games.genre_id = genre.genre_id ';
 	
 	if ($add_query)
@@ -46,7 +59,7 @@
 		$sql_query .= $add_query;
 	}
 
-	$sql_query .= 'GROUP BY games.game_id ORDER BY game_release_year DESC , game_name LIMIT 12';
+	$sql_query .= 'GROUP BY games.game_id ' . $query_order . ' LIMIT 25';
 
 	//echo $sql_query;
 	$db_result = $conn->prepare($sql_query);

@@ -9,8 +9,9 @@
 		$publisher_value = $_GET['publisher'];
 		$min_players_value = $_GET['min_players'];
 		$max_players_value = $_GET['max_players'];
+		$sort_value = $_GET['sort'];
 	} else {
-		$max_players_value = $min_players_value = $publisher_value = $console_value = $genre_value = 0;
+		$sort_value = $max_players_value = $min_players_value = $publisher_value = $console_value = $genre_value = 0;
 	}
 
 ?>
@@ -59,6 +60,14 @@
 							<option value="6">6</option>
 							<option value="7">7</option>
 							<option value="8">8</option>
+						</select>
+					</label>
+					<label>Sort by:
+						<select name="sort" id="sort" size="1">
+							<option value="0">&#9660 Release Year </option>
+							<option value="1">&#9650 Release Year </option>
+							<option value="2">&#9660 Name</option>
+							<option value="3">&#9650 Name</option>
 						</select>
 					</label>
 					<input type="submit" value="Submit">

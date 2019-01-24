@@ -176,7 +176,7 @@ header .nav .nav_item a {
 .game_wrapper label,
 .console_wrapper label {
   display: inline-block;
-  width: 120px;
+  width: 135px;
   padding: 3px;
 }
 .game_wrapper form,
@@ -192,7 +192,7 @@ header .nav .nav_item a {
   border: 1px solid #2d3047;
   background: #70b5ff;
   padding: 1px;
-  width: 100px;
+  width: 130px;
 }
 .game_wrapper .filters,
 .console_wrapper .filters {
