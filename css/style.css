@@ -187,12 +187,29 @@ header .nav .nav_item a {
   justify-content: flex-start;
   align-content: flex-start;
 }
+.game_wrapper datalist,
+.game_wrapper input,
 .game_wrapper select,
+.console_wrapper datalist,
+.console_wrapper input,
 .console_wrapper select {
   border: 1px solid #2d3047;
   background: #70b5ff;
   padding: 1px;
   width: 130px;
+}
+.game_wrapper #submit_button,
+.console_wrapper #submit_button {
+  width: 75px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.game_wrapper #submit_button:active,
+.console_wrapper #submit_button:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
 }
 .game_wrapper .filters,
 .console_wrapper .filters {

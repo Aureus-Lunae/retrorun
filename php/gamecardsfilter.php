@@ -23,7 +23,12 @@
 		}	
 	}
 
+	//Minmax 
+	
+	$max_set = false;
+
 	if ($min_players_value > 1){
+		$max_set = true;
 		if ($max_players_value >= $min_players_value){
 			if ($add_query){
 				$add_query .= 'AND game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
@@ -39,7 +44,8 @@
 		}
 	}
 
-	if ($max_players_value > 0){
+	echo $max_set;
+	if ($max_players_value > 0 && $max_set == false){
 		if ($max_players_value >= $min_players_value){
 			if ($add_query){
 				$add_query .= 'AND game_max_players BETWEEN ' . $min_players_value . ' AND ' . $max_players_value . ' ';
@@ -54,8 +60,6 @@
 			}	
 		}
 	}
-
-	SORT OPTIONS: ORDER BY game_release_year DESC
 	
 	switch ($sort_value) {
 		case 1:
@@ -83,7 +87,6 @@
 
 	$sql_query .= 'GROUP BY games.game_id ' . $query_order . ' LIMIT 25';
 
-	echo $sql_query;
 	$db_result = $conn->prepare($sql_query);
 
 	$db_result->execute();

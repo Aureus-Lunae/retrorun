@@ -10,9 +10,14 @@
 		$min_players_value = $_GET['min_players'];
 		$max_players_value = $_GET['max_players'];
 		$sort_value = $_GET['sort'];
+		$min_players_value = (int)$min_players_value;
+		$max_players_value = (int)$max_players_value;
 	} else {
-		$sort_value = $max_players_value = $min_players_value = $publisher_value = $console_value = $genre_value = 0;
+		$max_players_value = $min_players_value = $sort_value = $publisher_value = $console_value = $genre_value = 0;
 	}
+
+
+
 
 ?>
 
@@ -33,13 +38,16 @@
 	<section id="games">
 		<div class="game_wrapper">
 			<form action="games.php" method="get">
-				<span class="filters">Filters</span>
-				<br /><input type="submit" value="Submit"> 
+				<div>
+					<span class="filters">Filters</span>
+					<br /><input type="submit" value="Submit" id="submit_button">
+				</div>
 					<div class='filter_list'>
 						<?php include 'php/filters.php'; ?>
 
 						<label>Max Players Low
-							<select name="min_players" id="min_players" size="1">
+							<input type="text" list="max_players" name="min_players" value="1">
+							<datalist id="min_players" size="1">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -48,12 +56,13 @@
 								<option value="6">6</option>
 								<option value="7">7</option>
 								<option value="8">8</option>
-							</select>
+							</datalist>
 						</label>
 
 						<label>Max Players High
-							<select name="max_players" id="max_players" size="1">
-								<option value="0">No max</option>
+							<input type="text" list="max_players" name="max_players" value="All higher">
+							<datalist id="max_players" size="1">
+								<option value="0">All higher</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -62,7 +71,7 @@
 								<option value="6">6</option>
 								<option value="7">7</option>
 								<option value="8">8</option>
-							</select>
+							</datalist>
 						</label>
 						<label>Sort by:
 							<select name="sort" id="sort" size="1">

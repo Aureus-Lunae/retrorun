@@ -35,11 +35,26 @@
 		align-content: flex-start;
 	}
 
+	datalist,
+	input,
 	select {
 		border: 1px solid $primary_color;
 		background: $tertiary_color;
 		padding: 1px;
 		width: 130px;
+	}
+
+	#submit_button {
+		width: 75px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+	}
+
+	#submit_button:active {
+		position: relative;
+		top: 1px;
+		left: 1px;
 	}
 
 	.filters {
