@@ -45,6 +45,12 @@
 		case 1:
 			$query_order = 'ORDER BY game_release_year ASC, game_name ASC';
 			break;
+		case 2:
+			$query_order = 'ORDER BY game_name DESC, game_release_year DESC';
+			break;
+		case 3:
+			$query_order = 'ORDER BY game_name ASC, game_release_year DESC';
+			break;
 		default:
 			$query_order = 'ORDER BY game_release_year DESC, game_name ASC';
 			break;
