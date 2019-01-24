@@ -164,12 +164,49 @@ header .nav .nav_item a {
 .console_wrapper {
   background: #e84855;
   width: 100%;
+  padding: 2px;
   margin-bottom: 0;
 }
 .game_wrapper h1,
 .console_wrapper h1 {
   margin-left: 20px;
   font-size: 28px;
+}
+.game_wrapper label,
+.console_wrapper label {
+  display: inline-block;
+  width: 120px;
+  padding: 3px;
+}
+.game_wrapper form,
+.console_wrapper form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.game_wrapper select,
+.console_wrapper select {
+  border: 1px solid #2d3047;
+  background: #70b5ff;
+  padding: 1px;
+  width: 100px;
+}
+.game_wrapper .filters,
+.console_wrapper .filters {
+  color: #fffd82;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.game_wrapper .filter_list,
+.console_wrapper .filter_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 /* Game Page */

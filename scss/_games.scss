@@ -13,12 +13,50 @@
 .console_wrapper {
 	background: $secondary_color;
 	width: 100%;
+	padding: 2px;
 	margin-bottom: 0;
 
 	h1 {
 		margin-left: 20px;
 		font-size: 28px;
 	}
+
+	label {
+		display: inline-block;
+		width: 120px;
+		padding: 3px;
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		align-content: flex-start;
+	}
+
+	select {
+		border: 1px solid $primary_color;
+		background: $tertiary_color;
+		padding: 1px;
+		width: 100px;
+	}
+
+	.filters {
+		color: $secondary_text_color;
+		font-size: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.filter_list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		align-content: flex-start;
+	}
+
 }
 
 /* Game Page */

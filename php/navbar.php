@@ -9,7 +9,7 @@ $url='http://'.$url.'/week2/';
 		<div class='nav'>
 			<div class='nav_item'>
 			<a href='index.php'>Home</a>
-			<a href='#'>games</a>
+			<a href='games.php'>games</a>
 			<a href='#'>consoles</a>
 			</div>
 			<div class='nav_item'>
