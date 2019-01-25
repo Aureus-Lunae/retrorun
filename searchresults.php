@@ -44,12 +44,10 @@
 		</div>
 		<div class="grid_layout">
 			<?php require_once 'php/searchconsole.php'; ?>
-
 		</div>
-
 	</section>
 
-
+	<?php include 'html/sidebar.html' ?>
 
 </body>
 

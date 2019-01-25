@@ -89,6 +89,8 @@
 		</div>
 	</section>
 
+	<?php include 'html/sidebar.html' ?>
+
 </body>
 
 </html>

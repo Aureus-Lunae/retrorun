@@ -87,3 +87,9 @@
 	}
 
 }
+
+@media (max-width: 1000px) {
+	.colspan-2 {
+		grid-column-end: span 1;
+	}
+}

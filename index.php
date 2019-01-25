@@ -39,7 +39,7 @@
 
 	</section>
 
-
+	<?php include 'html/sidebar.html' ?>
 
 
 </body>

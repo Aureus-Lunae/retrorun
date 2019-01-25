@@ -171,6 +171,11 @@ header .nav .nav_item a:hover {
   filter: sepia(100%);
 }
 
+@media (max-width: 1000px) {
+  .colspan-2 {
+    grid-column-end: span 1;
+  }
+}
 /* homepage */
 #games,
 #consoles {
@@ -192,6 +197,7 @@ header .nav .nav_item a:hover {
 .console_wrapper h1 {
   margin-left: 20px;
   font-size: 24px;
+  line-height: 8px;
 }
 .game_wrapper label,
 .console_wrapper label {
@@ -250,8 +256,8 @@ header .nav .nav_item a:hover {
 /* Game Page */
 #page_container {
   min-width: 350px;
-  max-width: calc(100% - 448px);
-  margin-left: 64px;
+  max-width: calc(100% - 500px);
+  margin-left: 32px;
   display: flex;
   justify-content: center;
 }
@@ -313,6 +319,66 @@ header .nav .nav_item a:hover {
   width: 100%;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  #page_container {
+    min-width: 350px;
+    max-width: calc(100% - 400px);
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 760px) {
+  #page_container {
+    min-width: 350px;
+    max-width: calc(100% - 64px);
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  width: 320px;
+  right: 24px;
+  top: 80px;
+}
+#sidebar .sidebar_item {
+  width: 100%;
+  background: #151621;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+#sidebar h1 {
+  text-align: center;
+  line-height: 16px;
+  font-size: 24px;
+  color: #fffd82;
+}
+#sidebar p {
+  text-align: justify;
+}
+#sidebar a {
+  color: #fff;
+}
+#sidebar a:hover {
+  text-decoration: underline;
+  color: #fffd82;
+}
+
+@media (max-width: 960px) and (min-width: 761px) {
+  #sidebar {
+    top: 97px;
+    right: 5px;
+  }
+}
+@media (max-width: 760px) {
+  #sidebar {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
