@@ -49,8 +49,16 @@
 	<section id="consoles">
 		<div class="console_wrapper">
 			<h1>Consoles</h1>
+				<label>Sort by:
+					<?php echo '<select name="sortConsole" id="sortConsole" size="1" onchange="GetDataFromSearch(`php/consolesearchsort.php?search='.$search.'`, showDataConsole);">' ?> 
+						<option value="0">&#9660 Release Year </option>
+						<option value="1">&#9650 Release Year </option>
+						<option value="2">&#9660 Name</option>
+						<option value="3">&#9650 Name</option>
+					</select>
+				</label>
 		</div>
-		<div class="grid_layout">
+		<div id="console_filters_output" class="grid_layout">
 			<?php require_once 'php/searchconsole.php'; ?>
 		</div>
 	</section>

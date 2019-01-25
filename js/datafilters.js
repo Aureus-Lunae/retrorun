@@ -32,6 +32,8 @@ const GetDataFromSearch = (url, output) => {
   let checkGame = url.includes(`gamesearchsort.php`)
   if (checkGame) {
     sort = document.getElementById(`sortGame`).value;
+  } else {
+    sort = document.getElementById(`sortConsole`).value;
   }
   let compiledUrl =
     `${url}&sort=${sort}`;
