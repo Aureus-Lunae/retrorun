@@ -29,8 +29,16 @@
 	<section id="games">
 		<div class="game_wrapper">
 			<h1>Games</h1>
+				<label>Sort by:
+					<?php echo '<select name="sortGame" id="sortGame" size="1" onchange="GetDataFromSearch(`php/gamesearchsort.php?search='.$search.'`, showData);">' ?> 
+						<option value="0">&#9660 Release Year </option>
+						<option value="1">&#9650 Release Year </option>
+						<option value="2">&#9660 Name</option>
+						<option value="3">&#9650 Name</option>
+					</select>
+				</label>
 		</div>
-		<div class="grid_layout">
+		<div id="game_filters_output" class="grid_layout">
 
 			<?php require_once 'php/searchgame.php'; ?>
 
@@ -49,6 +57,7 @@
 
 	<?php include 'html/sidebar.html' ?>
 
+	<script src="js/datafilters.js"></script>
 </body>
 
 </html>

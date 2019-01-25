@@ -68,7 +68,7 @@
 					</datalist>
 				</label>
 				<label>Sort by:
-					<select name="sort" id="sort" size="1">
+					<select name="sort" id="sort" size="1" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
 						<option value="0">&#9660 Release Year </option>
 						<option value="1">&#9650 Release Year </option>
 						<option value="2">&#9660 Name</option>
@@ -80,7 +80,7 @@
 
 		<div class="grid_layout" id="game_filters_output">
 
-			<?php require_once 'php/gamecardsfilter.php'; ?>
+			<?php require_once 'php/gamecards.php'; ?>
 
 		</div>
 	</section>
