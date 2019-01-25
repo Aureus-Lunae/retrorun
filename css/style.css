@@ -192,6 +192,11 @@ header .nav .nav_item a:hover {
   width: 100%;
   padding: 2px;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 .game_wrapper h1,
 .console_wrapper h1 {
