@@ -35,46 +35,46 @@
 
 	<section id="games">
 		<div class="game_wrapper">
-					<span class="filters">Filters</span>
-					<div class='filter_list'>
-						<?php include 'php/filters.php'; ?>
+			<span class="filters">Filters</span>
+			<div class='filter_list'>
+				<?php include 'php/filters.php'; ?>
 
-						<label>Max Players Low
-							<input type="text" list="min_multi_players" name="min_players" value="1" id="min_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
-							<datalist id="min_multi_players" size="1">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-							</datalist>
-						</label>
+				<label>Max Players Low
+				<input type="text" list="min_multi_players" name="min_players" value="1" id="min_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
+					<datalist id="min_multi_players" size="1">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</datalist>
+				</label>
 
-						<label>Max Players High
-							<input type="text" list="max__multi_players" name="max_players" value="All higher" id="max_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
-							<datalist id="max_multi_players" size="1">
-								<option value="0">All higher</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-							</datalist>
-						</label>
-						<label>Sort by:
-							<select name="sort" id="sort" size="1">
-								<option value="0">&#9660 Release Year </option>
-								<option value="1">&#9650 Release Year </option>
-								<option value="2">&#9660 Name</option>
-								<option value="3">&#9650 Name</option>
-							</select>
-						</label>
+				<label>Max Players High
+					<input type="text" list="max__multi_players" name="max_players" value="All higher" id="max_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
+					<datalist id="max_multi_players" size="1">
+						<option value="0">All higher</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</datalist>
+				</label>
+				<label>Sort by:
+					<select name="sort" id="sort" size="1">
+						<option value="0">&#9660 Release Year </option>
+						<option value="1">&#9650 Release Year </option>
+						<option value="2">&#9660 Name</option>
+						<option value="3">&#9650 Name</option>
+					</select>
+				</label>
 					</div>
 		</div>
 
