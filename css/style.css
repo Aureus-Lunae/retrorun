@@ -357,6 +357,7 @@ header .nav .nav_item a:hover {
   background: #151621;
   border-radius: 10px;
   padding: 2px 10px;
+  margin-bottom: 16px;
 }
 #sidebar h1 {
   text-align: center;
