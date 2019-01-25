@@ -369,13 +369,13 @@ header .nav .nav_item a:hover {
   color: #fffd82;
 }
 
-@media (max-width: 960px) and (min-width: 761px) {
+@media (max-device-width: 960px) and (max-device-width: 761px), (max-width: 960px) and (min-width: 761px) {
   #sidebar {
     top: 97px;
     right: 5px;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 760px), (max-device-width: 760px) {
   #sidebar {
     display: none;
   }

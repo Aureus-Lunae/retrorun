@@ -17,7 +17,7 @@
   <meta name="description" content="Info about the game <?php echo $title; ?>" />
   <meta name="keywords" content=" " />
   <meta name="author" content="Erwin Korsten" />
-  <meta name="viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport content=" width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title><?php echo $title; ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />

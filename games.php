@@ -27,6 +27,7 @@
   <title>Retro Run</title>
 	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	
 </head>
 
 <body>
@@ -34,17 +35,13 @@
 
 	<section id="games">
 		<div class="game_wrapper">
-			<form action="games.php" method="get">
-				<div>
 					<span class="filters">Filters</span>
-					<br /><input type="submit" value="Submit" id="submit_button">
-				</div>
 					<div class='filter_list'>
 						<?php include 'php/filters.php'; ?>
 
 						<label>Max Players Low
-							<input type="text" list="max_players" name="min_players" value="1">
-							<datalist id="min_players" size="1">
+							<input type="text" list="min_multi_players" name="min_players" value="1" id="min_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
+							<datalist id="min_multi_players" size="1">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -57,8 +54,8 @@
 						</label>
 
 						<label>Max Players High
-							<input type="text" list="max_players" name="max_players" value="All higher">
-							<datalist id="max_players" size="1">
+							<input type="text" list="max__multi_players" name="max_players" value="All higher" id="max_players" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">
+							<datalist id="max_multi_players" size="1">
 								<option value="0">All higher</option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -79,10 +76,9 @@
 							</select>
 						</label>
 					</div>
-			</form>
 		</div>
 
-		<div class="grid_layout">
+		<div class="grid_layout" id="game_filters_output">
 
 			<?php require_once 'php/gamecardsfilter.php'; ?>
 
@@ -91,6 +87,7 @@
 
 	<?php include 'html/sidebar.html' ?>
 
+	<script src="js/datafilters.js"></script>
 </body>
 
 </html>

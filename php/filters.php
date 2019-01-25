@@ -10,7 +10,7 @@
 	$genre_db->execute();
 
   $genre = '<label>Genre:';
-  $genre .= '<select name="genre" id="genre" size="1">';
+  $genre .= '<select name="genre" id="genre" size="1" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">';
   $genre .= '<option value="0">None</option>';
 
 	foreach ($genre_db as $row) {          
@@ -28,7 +28,7 @@
 	$console_db->execute();
 
 	$console = '<label>Console:';
-  $console .= '<select name="console" id="console" size="1">';
+  $console .= '<select name="console" id="console" size="1" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">';
   $console .= '<option value="0">None</option>';
 
 	foreach ($console_db as $row) {          
@@ -45,7 +45,7 @@
 	$publisher_db->execute();
 
 	$publisher = '<label>publisher:';
-  $publisher .= '<select name="publisher" id="publisher" size="1">';
+  $publisher .= '<select name="publisher" id="publisher" size="1" onchange="GetDataFromDatabase(`php/ajaxfilter.php`, showData);">';
   $publisher .= '<option value="0">None</option>';
 
 	foreach ($publisher_db as $row) {          
